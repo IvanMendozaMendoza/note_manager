@@ -1,11 +1,10 @@
 import sidebar from "./views/sidebar.js";
-import viewer from "./views/viewer.js";
 import constructor from "./views/constructor.js";
+// import viewer from "./views/viewer.js";
 
 class App {
   constructor() {
     this.init();
-    // this.viewer = viewer.init();
   }
 
   init() {

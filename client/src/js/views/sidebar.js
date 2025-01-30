@@ -21,9 +21,17 @@ class SideBar {
     );
   }
 
-  // renderGoal() {
-  //   this.goalList.insertAdjacentHTML("beforeend", goalExample);
-  // }
+  renderGoal(title) {
+    const goalItem = document.createElement('li');
+    goalItem.classList = 'goal_list--item'
+
+    const goalLink = document.createElement('a');
+    goalLink.innerHTML = title;
+
+    goalItem.appendChild(goalItem);
+
+    this.goalList.appendChild(goalItem);
+  }
 }
 
 const sidebar = new SideBar();

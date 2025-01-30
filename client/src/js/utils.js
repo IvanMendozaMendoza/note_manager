@@ -17,5 +17,19 @@ export const quotesV2 = [
 ];
 
 export const guideStages = [
-  "The revolution years ahead is incredible close, please write your 5 year goal description"
+  "The revolution years ahead is incredible close, please write your 5 year goal description",
+  "If you already know you won't fail... please write your 1 year goal description ahead",
+  "The core of all achievements are your values, please write your 3 to 5 values description",
+  "There is no more abundance than giving... please write your mission, what you bring back",
+  "You know you are way beyond the heavens in observe... please write your vision from there",
+  "You know the power of relationships... please write 3 to 5 most influent in yout growth",
 ]
+
+export const docTemplate = {
+  '5y': null,
+  '1y': null,
+  'values': null,
+  "mission": null,
+  "vission": null,
+  'models': null
+}
