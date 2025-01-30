@@ -84,8 +84,8 @@ class Constructor {
         }
         case guideStages.length - 1: {
           this.goalDoc = { ...this.goalDoc, models: this.getInput() };
-          this.clearInput(0);
           console.log(this.goalDoc)
+          this.clearInput(0);
           break;
         }
       }
@@ -118,3 +118,9 @@ class Constructor {
 
 const constructor = new Constructor();
 export default constructor;
+
+ 
+// We ALREADY have the object with the data we need
+//TODO render the goal in the sidebarlist
+//TODO when clicked render the viewer with the information of that goal
+

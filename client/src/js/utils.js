@@ -24,12 +24,3 @@ export const guideStages = [
   "You know you are way beyond the heavens in observe... please write your vision from there",
   "You know the power of relationships... please write 3 to 5 most influent in yout growth",
 ]
-
-export const docTemplate = {
-  '5y': null,
-  '1y': null,
-  'values': null,
-  "mission": null,
-  "vission": null,
-  'models': null
-}
