@@ -8,6 +8,9 @@ class Viewer {
   }
 
   init() {
+    const main = document.querySelector("main");
+    main.innerHTML = "";
+    
     const html = `
     <section class="viewer">
         <div class="quote_label">
@@ -15,7 +18,7 @@ class Viewer {
         </div>
     </section>`;
     this.section.insertAdjacentHTML("afterbegin", html);
-    document.querySelector("main").appendChild(this.section);
+    main.appendChild(this.section);
   }
 
   renderQuote() {

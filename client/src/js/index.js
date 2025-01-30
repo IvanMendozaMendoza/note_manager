@@ -1,10 +1,12 @@
 import sidebar from "./views/sidebar.js";
 import viewer from "./views/viewer.js";
+import constructor from "./views/constructor.js";
 
 class App {
   constructor() {
     this.sideBar = sidebar;
-    this.viewer = viewer;
+    this.constructor = constructor;
+    // this.viewer = viewer;
   }
 }
 
