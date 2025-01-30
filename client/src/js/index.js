@@ -1,6 +1,9 @@
-import {quotesV1} from "./utils.js"
+import sidebar from "./views/sidebar.js";
 
-// SIDEBAR
-const sidebarQuote = document.getElementById("sidebar_quote");
-sidebarQuote.insertAdjacentHTML('beforeend', quotesV1[Math.round(Math.random() * 5)])
+class App {
+  constructor() {
+    this.sideBar = sidebar;
+  }
+}
 
+const app = new App();

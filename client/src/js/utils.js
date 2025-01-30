@@ -7,3 +7,12 @@ export const quotesV1 = [
   "Ideas mold reality, reshape them, perfect them..."
 ];
 
+
+// "
+/*
+ <li class="goal_list--item">
+    <a href="#" >Manifestacion Master</a
+ </li>
+*/
+// "
+
