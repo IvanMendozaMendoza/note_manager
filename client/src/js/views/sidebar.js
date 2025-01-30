@@ -3,11 +3,12 @@ import { quotesV1 } from "../utils.js";
 const goalExample = `
 <li class="goal_list--item">
     <a href="#">Manifestacion Master</a>
-    </li>`;
+</li>`;
 
 class SideBar {
   sidebarQuote = document.getElementById("sidebar_quote");
   goalList = document.getElementById("goal_list");
+  
   constructor() {
     this.renderQuote();
     this.renderGoal();
