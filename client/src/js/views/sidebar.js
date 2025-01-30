@@ -8,10 +8,10 @@ const goalExample = `
 class SideBar {
   sidebarQuote = document.getElementById("sidebar_quote");
   goalList = document.getElementById("goal_list");
-  
+
   constructor() {
     this.renderQuote();
-    this.renderGoal();
+    // this.renderGoal();
   }
 
   renderQuote() {
@@ -21,9 +21,9 @@ class SideBar {
     );
   }
 
-  renderGoal() {
-    this.goalList.insertAdjacentHTML("beforeend", goalExample);
-  }
+  // renderGoal() {
+  //   this.goalList.insertAdjacentHTML("beforeend", goalExample);
+  // }
 }
 
 const sidebar = new SideBar();

@@ -4,9 +4,13 @@ import constructor from "./views/constructor.js";
 
 class App {
   constructor() {
+    this.init();
+    // this.viewer = viewer.init();
+  }
+
+  init() {
     this.sideBar = sidebar;
-    // this.constructor = constructor;
-    this.viewer = viewer.init();
+    this.constructor = constructor.init();
   }
 }
 

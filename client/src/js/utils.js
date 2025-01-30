@@ -19,12 +19,3 @@ export const quotesV2 = [
 export const guideStages = [
   "The revolution years ahead is incredible close, please write your 5 year goal description"
 ]
-
-// "
-/*
- <li class="goal_list--item">
-    <a href="#" >Manifestacion Master</a
- </li>
-*/
-// "
-

@@ -15,7 +15,7 @@ class Constructor {
     </div>
 
     <div class="input__box">
-        <form action="#" method="post" class="input__field">
+        <div class="input__field">
             <input
             type="text"
             name="textarea"
@@ -23,7 +23,7 @@ class Constructor {
             placeholder="Your thoughts..."
             />
             <button class="btn">→</button>
-        </form>
+        </div>
     </div>
   `;
 
