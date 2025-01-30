@@ -5,8 +5,8 @@ import constructor from "./views/constructor.js";
 class App {
   constructor() {
     this.sideBar = sidebar;
-    this.constructor = constructor;
-    // this.viewer = viewer;
+    // this.constructor = constructor;
+    this.viewer = viewer.init();
   }
 }
 

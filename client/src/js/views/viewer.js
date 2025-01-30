@@ -2,15 +2,12 @@ import { quotesV2 } from "../utils.js";
 
 class Viewer {
   section = document.createElement("section");
-  constructor() {
-    this.init();
-    this.renderQuote();
-  }
+  constructor() {}
 
   init() {
     const main = document.querySelector("main");
     main.innerHTML = "";
-    
+
     const html = `
     <section class="viewer">
         <div class="quote_label">
@@ -19,6 +16,8 @@ class Viewer {
     </section>`;
     this.section.insertAdjacentHTML("afterbegin", html);
     main.appendChild(this.section);
+
+    this.renderQuote();
   }
 
   renderQuote() {

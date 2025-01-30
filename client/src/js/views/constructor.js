@@ -2,9 +2,7 @@ import { guideStages } from "../utils.js";
 class Constructor {
   section = document.createElement("section");
 
-  constructor() {
-    this.init();
-  }
+  constructor() {}
 
   init() {
     this.section.className = "constructor";
@@ -12,21 +10,21 @@ class Constructor {
     main.innerHTML = "";
 
     this.section.innerHTML = `
-          <div class="constructor__guide">
-    <p id="guide"></p>
-  </div>
+    <div class="constructor__guide">
+        <p id="guide"></p>
+    </div>
 
-  <div class="input__box">
-    <form action="#" method="post" class="input__field">
-      <input
-        type="text"
-        name="textarea"
-        class="input"
-        placeholder="Your thoughts..."
-      />
-      <button class="btn">→</button>
-    </form>
-  </div>
+    <div class="input__box">
+        <form action="#" method="post" class="input__field">
+            <input
+            type="text"
+            name="textarea"
+            class="input"
+            placeholder="Your thoughts..."
+            />
+            <button class="btn">→</button>
+        </form>
+    </div>
   `;
 
     main.appendChild(this.section);
