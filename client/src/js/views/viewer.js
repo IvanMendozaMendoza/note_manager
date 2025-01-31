@@ -1,4 +1,5 @@
 import { quotesV2 } from "../utils.js";
+import constructor from "./constructor.js";
 
 class Viewer {
   section = document.createElement("section");
@@ -14,12 +15,17 @@ class Viewer {
         <div class="quote_label">
             <p id="quote"></p>
         </div>
+        <a class="back"> ← </a>
     </section>`;
 
     this.section.insertAdjacentHTML("afterbegin", html);
     main.appendChild(this.section);
 
     this.renderQuote();
+
+    document
+      .querySelector(".back")
+      .addEventListener("click", () => this.back());
 
     this.renderGoal(data);
   }
@@ -48,6 +54,10 @@ class Viewer {
   renderQuote() {
     const quote = quotesV2[Math.round(Math.random() * 5)];
     document.getElementById("quote").insertAdjacentHTML("beforeend", quote);
+  }
+
+  back(){
+    constructor.init()
   }
 }
 

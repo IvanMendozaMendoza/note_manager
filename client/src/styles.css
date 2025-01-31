@@ -53,6 +53,7 @@ main {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -113,6 +114,7 @@ a {
 
 .constructor__guide {
   width: 80%;
+  animation: fade .3s ease-in forwards;
 }
 
 .constructor__guide p {
@@ -156,6 +158,16 @@ a {
   border-radius: var(--br-md);
   box-shadow: var(--shadow-primary);
   transition: all 0.3s;
+  animation: fade .3s ease-in forwards;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .input__label {
@@ -205,6 +217,20 @@ a {
 }
 
 /* VIEWER SECTION */
+
+.back {
+  position: absolute;
+  left: 23%;
+  top: 10%;
+  font-size: 1.7rem;
+  color: #cccc;
+  transform: translateX(50%);
+  transition: color .2s; 
+}
+
+.back:hover {
+  color: #cbcbcb;
+}
 
 .viewer {
   width: 100%;
