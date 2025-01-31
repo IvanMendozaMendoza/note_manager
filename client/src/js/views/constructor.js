@@ -1,4 +1,5 @@
 import { guideStages } from "../utils.js";
+import sidebar from "./sidebar.js";
 
 class Constructor {
   section = document.createElement("section");
@@ -55,43 +56,52 @@ class Constructor {
     btn.className = "btn";
     btn.innerHTML = "→";
 
-    btn.addEventListener("click", () => {
-      switch (this.currentGuide) {
-        case 0: {
-          this.goalDoc = { ...this.goalDoc, "5y": this.getInput() };
-          this.clearInput(1);
-          break;
-        }
-        case 1: {
-          this.goalDoc = { ...this.goalDoc, "1y": this.getInput() };
-          this.clearInput(2);
-          break;
-        }
-        case 2: {
-          this.goalDoc = { ...this.goalDoc, values: this.getInput() };
-          this.clearInput(3);
-          break;
-        }
-        case 3: {
-          this.goalDoc = { ...this.goalDoc, mission: this.getInput() };
-          this.clearInput(4);
-          break;
-        }
-        case 4: {
-          this.goalDoc = { ...this.goalDoc, vision: this.getInput() };
-          this.clearInput(5);
-          break;
-        }
-        case guideStages.length - 1: {
-          this.goalDoc = { ...this.goalDoc, models: this.getInput() };
-          console.log(this.goalDoc)
-          this.clearInput(0);
-          break;
-        }
+    btn.addEventListener("click", this.setInput);
+    document.querySelector('.input').addEventListener("keydown", (e)=> {
+      if(e.key === 'Enter'){
+        this.setInput();
       }
     });
 
     document.querySelector(".input__field").appendChild(btn);
+  }
+
+  setInput() {
+    switch (this.currentGuide) {
+      case 0: {
+        this.goalDoc = { ...this.goalDoc, "5 Year Goal Statement - ": this.getInput() };
+        this.clearInput(1);
+        break;
+      }
+      case 1: {
+        this.goalDoc = { ...this.goalDoc, "1 Year Goal Statement - ": this.getInput() };
+        this.clearInput(2);
+        break;
+      }
+      case 2: {
+        this.goalDoc = { ...this.goalDoc, "Core values Statement - ": this.getInput() };
+        this.clearInput(3);
+        break;
+      }
+      case 3: {
+        this.goalDoc = { ...this.goalDoc, "Core Mission Statement - ": this.getInput() };
+        this.clearInput(4);
+        break;
+      }
+      case 4: {
+        this.goalDoc = { ...this.goalDoc, "Core Vission Statement - ": this.getInput() };
+        this.clearInput(5);
+        break;
+      }
+      case guideStages.length - 1: {
+        this.goalDoc = { ...this.goalDoc, models: this.getInput() };
+        this.renderListGoal(this.goalDoc);
+
+        this.clearInput(0);
+        this.goalDoc = {};
+        break;
+      }
+    }
   }
 
   getInput() {
@@ -99,17 +109,13 @@ class Constructor {
     return input.value;
   }
 
-  // exportGoal(fn) {
-  //   // data goal saved
-  //   // todo, export title to the fn as keyword
-  //   fn();
-  // }
-
-  // createGoalDoc() {}
-
+  renderListGoal(data) {
+    sidebar.renderGoal(data);
+  }
   clearInput(indexGuide) {
     const input = document.getElementById("input");
     input.value = "";
+    input.focus();
 
     this.currentGuide = indexGuide;
     this.renderGuide();
@@ -118,9 +124,3 @@ class Constructor {
 
 const constructor = new Constructor();
 export default constructor;
-
- 
-// We ALREADY have the object with the data we need
-//TODO render the goal in the sidebarlist
-//TODO when clicked render the viewer with the information of that goal
-

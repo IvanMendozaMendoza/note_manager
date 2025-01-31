@@ -24,3 +24,17 @@ export const guideStages = [
   "You know you are way beyond the heavens in observe... please write your vision from there",
   "You know the power of relationships... please write 3 to 5 most influent in yout growth",
 ]
+
+export const goalListNames = [
+  "The Master One",
+  "The Visionary Path",
+  "The Ultimate Quest",
+  "The Grand Journey",
+  "The Epic Pursuit",
+  "The Noble Endeavor",
+  "The Heroic Voyage",
+  "The Supreme Mission",
+  "The Legendary Trail",
+  "The Majestic Route",
+  "The Infinite Ascent"
+]

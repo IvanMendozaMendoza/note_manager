@@ -6,7 +6,7 @@ class App {
   constructor() {
     this.init();
   }
-
+ 
   init() {
     this.sideBar = sidebar;
     this.constructor = constructor.init();

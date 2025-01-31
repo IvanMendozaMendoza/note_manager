@@ -1,17 +1,13 @@
-import { quotesV1 } from "../utils.js";
-
-const goalExample = `
-<li class="goal_list--item">
-    <a href="#">Manifestacion Master</a>
-</li>`;
+import { quotesV1, goalListNames } from "../utils.js";
+import viewer from "./viewer.js";
 
 class SideBar {
   sidebarQuote = document.getElementById("sidebar_quote");
   goalList = document.getElementById("goal_list");
+  goals = [];
 
   constructor() {
     this.renderQuote();
-    // this.renderGoal();
   }
 
   renderQuote() {
@@ -21,16 +17,23 @@ class SideBar {
     );
   }
 
-  renderGoal(title) {
-    const goalItem = document.createElement('li');
-    goalItem.classList = 'goal_list--item'
+  renderGoal(data) {
+    this.goals.push(data);
 
-    const goalLink = document.createElement('a');
-    goalLink.innerHTML = title;
+    const goalItem = document.createElement("li");
+    goalItem.classList = "goal_list--item";
 
-    goalItem.appendChild(goalItem);
+    const goalLink = document.createElement("a");
+    goalLink.innerHTML = goalListNames[Math.round(Math.random() * 10)];
+    goalLink.id = `${this.goals.length - 1}`;
+    goalItem.addEventListener("click", () => this.renderView(this.goals[goalLink.id]));
+    goalItem.appendChild(goalLink);
 
     this.goalList.appendChild(goalItem);
+  }
+
+  renderView(data) {
+    viewer.init(data)
   }
 }
 
